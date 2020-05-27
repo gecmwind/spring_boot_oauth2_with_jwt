@@ -5,11 +5,14 @@ import org.springframework.security.core.GrantedAuthority;
 import java.util.ArrayList;
 import java.util.Collection;
 
+/**
+ * @author cm
+ */
 public class UserEntity {
     private String username;
     private String password;
     private Collection<GrantedAuthority> grantedAuthoritiesList = new ArrayList<>();
-
+    private String photo;
     public String getPassword() {
         return password;
     }
@@ -27,5 +30,13 @@ public class UserEntity {
     }
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

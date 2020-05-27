@@ -29,8 +29,9 @@ public class OAuthDao {
 //                });
         List<UserEntity> list = new ArrayList<>();
         UserEntity userEntity = new UserEntity();
-        userEntity.setUsername("tutorialspoint@gmail.com");
-        userEntity.setPassword("$2a$08$fL7u5xcvsZl78su29x1ti.dxI.9rYO8t0q5wk2ROJ.1cdR53bmaVG");
+        userEntity.setUsername("myemail@gmail.com");
+        userEntity.setPassword("$2a$10$hQrLe/YgeGodhmOqXdw06.RYoeiQvvxkWpzCRfdsW94Qatot1J8yi");
+        userEntity.setPhoto("kjdfoiuhun13ounincandcnlaieuriquncoafnou");
         list.add(userEntity);
         if (list.size() > 0) {
             GrantedAuthority grantedAuthority = new SimpleGrantedAuthority("ROLE_SYSTEMADMIN");

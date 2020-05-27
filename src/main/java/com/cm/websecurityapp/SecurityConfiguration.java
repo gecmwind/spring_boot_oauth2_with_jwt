@@ -1,5 +1,6 @@
 package com.cm.websecurityapp;
 
+import com.cm.websecurityapp.service.impl.CustomDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,14 +14,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.provider.ClientDetailsService;
 
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
-    private CustomDetailsService customDetailsService;
-
+    private CustomDetailsServiceImpl customDetailsService;
+    @Autowired
+    private ClientDetailsService clientDetailsService;
     @Bean
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();

@@ -1,12 +1,15 @@
-package com.cm.websecurityapp;
+package com.cm.websecurityapp.service.impl;
 
+import com.cm.websecurityapp.CustomUser;
+import com.cm.websecurityapp.OAuthDao;
+import com.cm.websecurityapp.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class CustomDetailsService implements UserDetailsService {
+public class CustomDetailsServiceImpl implements UserDetailsService {
     @Autowired
     OAuthDao oauthDao;
 
